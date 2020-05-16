@@ -20,7 +20,7 @@ headers = {
             'User-Agent': "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36",
             'If-Modified-Since': "Thu, 16 Apr 2020 08:11:20 GMT",
             'Accept': "*/*",
-            'Referer': "http://test.gzjirui.com/magicflu/html/form/records2.jsp?spaceId=93d0b958-52d3-4858-b6e9-344a23aede67&formId=-1",
+            'Referer': "http://************/magicflu/html/form/records2.jsp?spaceId=93d0b958-52d3-4858-b6e9-344a23aede67&formId=-1",
             'X-Requested-With': "XMLHttpRequest",
             'Connection': "keep-alive",
             'X-FirePHP-Version': "0.0.6",
@@ -35,7 +35,7 @@ class FFWBAPI(object):
         self.table_id = table_id
 
     def upload_file(self, id, file_path):
-        url = "http://test.gzjirui.com/magicflu/service/s/%s/forms/%s/records/%s/txt/attachments?jqUpload" % (self.space_id, self.table_id, id)
+        url = "http://************/magicflu/service/s/%s/forms/%s/records/%s/txt/attachments?jqUpload" % (self.space_id, self.table_id, id)
         filename = file_path.split('\\')[-1]
         file_data = {
             "files": (filename, open(file_path, 'rb').read())
@@ -46,12 +46,12 @@ class FFWBAPI(object):
         headers = {
             'content-type': encode_data[1],
             'Cookie': cookie,
-            'Origin': "http://test.gzjirui.com",
+            'Origin': "http://************",
             'Accept-Encoding': "gzip, deflate",
             'Accept-Language': "zh-CN,zh;q=0.9",
             'User-Agent': "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36",
             'Accept': "application/json, text/javascript, */*; q=0.01",
-            'Referer': "http://test.gzjirui.com/magicflu/html/upload/upload.jsp?single=true&upload_url=%2Fmagicflu%2Fservice%2Fs%2F93d0b958-52d3-4858-b6e9-344a23aede67%2Fforms%2F2717074e-7886-4495-9a0e-4733e55098d2%2Frecords%2F12%2Ftxt%2Fattachments%3FjqUpload&file_size_limit=8000000&file_types=*.*&file_types_description=%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6",
+            'Referer': "http://************/magicflu/html/upload/upload.jsp?single=true&upload_url=%2Fmagicflu%2Fservice%2Fs%2F93d0b958-52d3-4858-b6e9-344a23aede67%2Fforms%2F2717074e-7886-4495-9a0e-4733e55098d2%2Frecords%2F12%2Ftxt%2Fattachments%3FjqUpload&file_size_limit=8000000&file_types=*.*&file_types_description=%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6",
             'X-Requested-With': "XMLHttpRequest",
             'Connection': "keep-alive",
             'X-FirePHP-Version': "0.0.6",
@@ -63,7 +63,7 @@ class FFWBAPI(object):
 
 
     def insert_record(self, data):
-        url = "http://test.gzjirui.com/magicflu/service/s/jsonv2/%s/forms/%s/records" % (self.space_id, self.table_id)
+        url = "http://*********/magicflu/service/s/jsonv2/%s/forms/%s/records" % (self.space_id, self.table_id)
         payload = {
             "zhuguanbumen1": data['spider'],
             "wangzhanleixing": data['type'],
@@ -103,7 +103,7 @@ class FFWBAPI(object):
         """
         根据fid 转换成id
         """
-        url = "http://test.gzjirui.com/magicflu/service/s/%s/forms/%s/records/feed" % (self.space_id, self.table_id)
+        url = "http://************/magicflu/service/s/%s/forms/%s/records/feed" % (self.space_id, self.table_id)
         querystring = {
             "currentUserId": "",
             "start": "0",

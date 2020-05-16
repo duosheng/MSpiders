@@ -2,7 +2,7 @@
 # ---------------------------------------
 #   语言：Python2.7
 #   日期：2017-07-10
-#   作者：九茶<bone_ace@163.com>
+#   作者：code pande
 #   功能：requests下载器
 # ---------------------------------------
 from urllib.parse import urlencode
